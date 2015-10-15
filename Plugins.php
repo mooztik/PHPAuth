@@ -252,5 +252,25 @@ class Plugins extends Auth
 
 		return $return;
 	}
+
+
+   /**
+     * Verifies a captcha code
+     * @param string $captcha
+     * @return boolean
+     */
+    private function checkCaptcha($captcha)
+    {
+        $func = $this->config->plugin_captcha;
+        if(!empty($func) ) 
+        {        	
+        	if($this->pluginLoad($func) === TRUE)
+			{
+				$do = trim($this->plugin[$func]['check']);				
+				return $this->$func->$do($uid);				
+			}	
+        }			
+        return true;
+    }
 	 
  }
