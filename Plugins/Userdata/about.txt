@@ -1,0 +1,10 @@
+name=Userdata
+author=Mooztik
+contact=mooztik@hotmail.com
+version=0.1
+authversion=0
+get=getData
+set=setData
+delete=deleteData
+check=
+description=extended user datas in PHPAuth

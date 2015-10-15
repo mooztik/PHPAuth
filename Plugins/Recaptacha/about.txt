@@ -1,0 +1,9 @@
+name=captcha
+author=Mooztik
+contact=mooztik@hotmail.com
+version=0.1
+authversion=0
+get=
+set=
+check=
+description=captcha in PHPAuth

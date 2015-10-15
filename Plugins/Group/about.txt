@@ -1,0 +1,6 @@
+name=groups
+author=Mooztik
+contact=mooztik@hotmail.com
+version=0.5
+authversion=0
+description=now you can add group support in PHPAuth
