@@ -50,8 +50,10 @@ INSERT INTO `config` (`id`, `setting`, `value`) VALUES
 (34,    'attempts_before_verify', '5'),
 (35,    'attempts_before_ban', '30'),
 (36,    'emailmessage_suppress_activation', '0'),
-(37,    'emailmessage_suppress_reset', '0');
-
+(37,    'emailmessage_suppress_reset', '0'),
+(38,	'table_userdata', 'userdata'),
+(39,	'plugin_userdata', 'Userdata'),
+(40,	'plugin_captcha', '');
 DROP TABLE IF EXISTS `attempts`;
 CREATE TABLE `attempts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -94,5 +96,12 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `userdata`;
+CREATE TABLE `userdata` (
+  `uid` int(10) unsigned NOT NULL,
+  `username` varchar(125) DEFAULT NULL,
+  `shop` smallint(3) unsigned DEFAULT NULL,
+  `role` tinyint(1) unsigned DEFAULT NULL,
+  UNIQUE KEY `uid` (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 2015-05-08 20:15:43
